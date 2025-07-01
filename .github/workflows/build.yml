@@ -79,6 +79,11 @@ jobs:
         source ../scripts/add_packages.sh
         source ../scripts/custome_config.sh
 
+    - name: Patch virt.mk to support rockchip_armv8Add commentMore actions
+      run: |
+        cd project/friendlywrt/package/kernel/linux/modules
+        sed -i '/^DEPENDS:=@TARGET_x86_64||TARGET_armsr_armv8/ s|$| ||TARGET_rockchip_armv8|' virt.mk
+
     - name: Prepare dot config and feeds
       run: |
         cd project
