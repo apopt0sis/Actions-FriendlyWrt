@@ -31,6 +31,7 @@ CONFIGS=(
   "CONFIG_VFIO=y"
   "CONFIG_VFIO_IOMMU_TYPE1=y"
   "CONFIG_VFIO_PLATFORM=y"
+  "CONFIG_USB_UAS=n"
 )
 
 source .current_config.mk
